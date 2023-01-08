@@ -3,6 +3,7 @@ import Home from './pages/home'
 import Intro from './pages/intro'
 import './index.css'
 import Main from './pages/main'
+import Settings from './pages/settings'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
          <Route path="/" element={<Home />}/>
          <Route path="/intro" element={<Intro />}/>
          <Route path="/main" element={<Main/>}/>
+         <Route path="/settings" element={<Settings/>}/>
          <Route/>
         </Routes>
       </HashRouter>
