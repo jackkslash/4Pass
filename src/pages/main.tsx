@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Salter from "../components/salter"
 
 const main = () => {
   return (
@@ -11,6 +12,7 @@ const main = () => {
         </div>
         <div className='h-3/5'>
           <div className='text-white text-xl pt-4 font-bold'>Passwords</div>
+          <Salter/>
         </div>
         <div className='h-1/5'>
           <div className='text-white text-xl pt-4 font-bold '>Add</div>
