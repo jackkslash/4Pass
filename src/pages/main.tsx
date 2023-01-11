@@ -1,5 +1,6 @@
 import { Cog8ToothIcon} from '@heroicons/react/24/solid'
 import { Link } from 'react-router-dom'
+import AddSalter from '../components/addSalter'
 import Salter from "../components/salter"
 
 const main = () => {
@@ -14,7 +15,7 @@ const main = () => {
           
         </div>
         <div className='h-3/5'>
-          <div className='text-white text-xl pt-4 font-bold'>Passwords</div>
+          <AddSalter/>
           <Salter/>
           <Salter/>
           <Salter/>
