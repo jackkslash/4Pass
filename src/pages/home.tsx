@@ -1,7 +1,16 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 const home = () => {
+
+  const alreadyUser = localStorage.getItem("checkPoint")
+  const navigate = useNavigate();
+
+  useEffect(()=>{
+    if(alreadyUser != null){navigate("/main")}
+  },[])
+  
+  
   return (
     <div className="flex flex-col items-center justify-center h-screen font-bold">
       <div className='flex flex-col items-center justify-center'>
