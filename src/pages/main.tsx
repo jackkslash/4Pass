@@ -5,13 +5,15 @@ import AddSalter from '../components/addSalter'
 import Salter from "../components/salter"
 
 const main = () => {
-  const alreadyUser = localStorage.getItem("checkPoint")
+  const alreadyUser = localStorage.getItem("checkPoint");
+  const localSalts = localStorage.getItem("salts");
   const navigate = useNavigate();
-
+  const salts = localSalts.split(',');
+ 
   useEffect(()=>{
     if(alreadyUser == null){navigate("/")}
-  },[])
 
+  },[])
   return (
     <div>
       <div className='flex flex-col items-center h-screen'>
@@ -20,13 +22,15 @@ const main = () => {
           <div className=''>
             <Link to={'/settings'} className='btn btn-circle btn-sm'><Cog8ToothIcon className="h-4 w-4 text-blue-500"/></Link>
           </div>
-          
         </div>
         <div className='h-4/5'>
           <AddSalter/>
-          <Salter/>
-          <Salter/>
-          <Salter/>
+          {salts.map((m, index)=>(
+             <>
+             <Salter saltText={m}/>
+             </>
+             
+          ))}
         </div>
       </div>
     </div>

@@ -18,6 +18,7 @@ const intro = () => {
     console.log(phrase);
     localStorage.setItem('checkPoint', 'true')
     localStorage.setItem('phrase', JSON.stringify(phrase))
+    localStorage.setItem('salts', "test")
     navigate('/main')
   }
   console.log('test');

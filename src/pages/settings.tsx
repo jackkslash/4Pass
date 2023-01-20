@@ -1,11 +1,13 @@
 import { XMarkIcon } from '@heroicons/react/24/solid'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const settings = () => {
 
+  const navigate = useNavigate();
   const wipeData = () =>{
     localStorage.clear();
+    navigate("/")
   }
 
   const clearSalts = () => {
