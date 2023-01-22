@@ -30,7 +30,7 @@ const main = () => {
           </div>
         </div>
 
-        <div className='h-4/5 w-1/3'>
+        <div className='h-4/5'>
           <AddSalter />
           {salts.map((m, index) => (
             <>
