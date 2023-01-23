@@ -28,10 +28,10 @@ const intro = () => {
         <div className='text-white text-xl'>Input four random keywords to be your phrase.</div>
       </div>
       <form onSubmit={handleSubmit} className='flex flex-col items-center justify-center space-y-2.5'>
-        <input id='one' name='one' type="text" placeholder="Phrase one" className="input input-bordered placeholder:text-center" />
-        <input id='two' name='two' type="text" placeholder="Phrase two" className="input input-bordered placeholder:text-center" />
-        <input id='three' name='three' type="text" placeholder="Phrase three" className="input input-bordered placeholder:text-center" />
-        <input id='four' name='four' type="text" placeholder="Phrase four" className="input input-bordered placeholder:text-center" />
+        <input id='one' name='one' type="text" placeholder="Phrase one" className="input input-bordered placeholder:text-center" required/>
+        <input id='two' name='two' type="text" placeholder="Phrase two" className="input input-bordered placeholder:text-center" required/>
+        <input id='three' name='three' type="text" placeholder="Phrase three" className="input input-bordered placeholder:text-center" required/>
+        <input id='four' name='four' type="text" placeholder="Phrase four" className="input input-bordered placeholder:text-center" required/>
         <button className='btn' type='submit'>Submit</button>
       </form>
 

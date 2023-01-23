@@ -2,7 +2,7 @@ import { DocumentDuplicateIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import { sha3_384 } from 'js-sha3';
 import React from 'react'
 
-const Salter = (saltText: any) => {
+const Salter = (saltText) => {
   const phrase = JSON.parse(localStorage.getItem("phrase"));
   const password = sha3_384(phrase.one+phrase.two+phrase.three+phrase.four + saltText.saltText)
 

@@ -1,12 +1,12 @@
 import { Cog8ToothIcon } from '@heroicons/react/24/solid'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import AddSalter from '../components/addSalter'
 import Salter from "../components/salter"
 
 const main = () => {
+  const [localSalts, setLocalSalts] = useState(localStorage.getItem("salts"));
   const alreadyUser = localStorage.getItem("checkPoint");
-  const localSalts = localStorage.getItem("salts");
   const phrase = JSON.parse(localStorage.getItem("phrase"));
   const navigate = useNavigate();
   const salts = localSalts.split(',');
@@ -14,7 +14,9 @@ const main = () => {
   useEffect(() => {
     if (alreadyUser == null) { navigate("/") }
 
-  }, [])
+  }, [salts])
+
+
   return (
     <div>
       <div className='flex flex-col items-center h-screen'>
