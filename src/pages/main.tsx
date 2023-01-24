@@ -9,11 +9,12 @@ const main = () => {
   const alreadyUser = localStorage.getItem("checkPoint");
   const phrase = JSON.parse(localStorage.getItem("phrase"));
   const navigate = useNavigate();
-  const salts = localSalts.split(',');
+  const [salts, setSalts] = useState(localSalts.split(','))
 
   useEffect(() => {
     if (alreadyUser == null) { navigate("/") }
-
+    setLocalSalts(localStorage.getItem("salts"))
+    setSalts(localSalts.split(','))
   }, [salts])
 
 
